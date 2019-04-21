@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/videoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/title_layout"
+            android:layout_alignParentTop="true"
+            android:background="#4D101010">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitXY"
+                android:id="@+id/back"
+                android:layout_centerVertical="true"
+                android:src="@drawable/previous_white" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="title"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <com.android.mediaplayer.view.MyVideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            android:layout_centerInParent="true"
+            />
+
+        <LinearLayout
+            android:id="@+id/control_layout"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#4D101010">
+
+            <SeekBar
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:thumb="@drawable/point"
+                android:thumbOffset="10dp"
+                android:id="@+id/pos_seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:indeterminate="false"
+                android:splitTrack="false"
+                android:progressDrawable="@drawable/seekbar_style"
+                android:progress="50"
+                android:max="100"
+                android:maxHeight="5dp"
+                android:minHeight="5dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                >
+
+                <ImageView
+                    android:src="@drawable/move"
+                    android:id="@+id/move"
+                    android:layout_width="35dp"
+                    android:scaleType="fitXY"
+                    android:padding="5dp"
+                    android:layout_toRightOf="@+id/stop"
+                    android:layout_centerInParent="true"
+                    android:layout_height="35dp"/>
+                <ImageView
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/goback"
+                    android:id="@+id/goback"
+                    android:layout_width="35dp"
+                    android:scaleType="fitXY"
+                    android:padding="5dp"
+                    android:layout_toLeftOf="@+id/stop"
+                    android:layout_centerInParent="true"
+                    android:layout_height="35dp"/>
+                    <ImageView
+                        android:src="@drawable/run"
+                        android:id="@+id/stop"
+                        android:layout_width="40dp"
+                        android:scaleType="fitXY"
+                        android:padding="5dp"
+                        android:layout_centerInParent="true"
+                        android:layout_height="40dp"/>
+
+                <TextView
+                    android:id="@+id/current_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00:00"
+                    android:layout_marginStart="10dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+
+                    <TextView
+                        android:textColor="#fff"
+                        android:layout_marginStart="5dp"
+                        android:text="/"
+                        android:textSize="14sp"
+                        android:id="@+id/divider_lint"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/current_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="#fff"
+                        android:id="@+id/total_time"
+                        android:text="00:00:00"
+                        android:layout_marginStart="5dp"
+                        android:textSize="14sp"
+                        android:layout_toEndOf="@+id/divider_lint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        />
+
+
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/fullscreen"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:scaleType="centerCrop"
+                        android:padding="2dp"
+                        android:id="@+id/fullscreen"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <include layout="@layout/progress_layout"/>
+    </RelativeLayout>
+</LinearLayout>

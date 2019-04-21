@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_content"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp"
+    android:layout_centerInParent="true"
+    android:layout_marginTop="-50dp"
+    android:background="@drawable/progress_background"
+    android:orientation="horizontal"
+    android:visibility="gone">
+    // 放置音量或者亮度的图片
+    <ImageView
+        android:id="@+id/operation_bg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/volume"
+        />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp">
+        // 音量或者亮度进度条的背景--进度条拿布局来写的，不是seekbar--都Ok的
+        <View
+            android:layout_width="94dp"
+            android:layout_height="2dp"
+            android:layout_gravity="left"
+            android:background="#fff"
+            android:scaleType="fitXY"
+            />
+        // 音量或者亮度进度条的进度--进度条拿布局来写的，不是seekbar--都Ok的
+        <View
+            android:id="@+id/operation_percent"
+            android:layout_width="94dp"
+            android:layout_height="2dp"
+            android:layout_gravity="left"
+            android:background="@color/colorAccent"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+</LinearLayout>

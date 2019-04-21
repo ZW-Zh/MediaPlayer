@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/localmusic"
+        android:icon="@drawable/localmusic"
+        android:title="本地音乐"/>
+
+    <item
+        android:id="@+id/webmusic"
+        android:icon="@drawable/webmusic"
+        android:title="音乐推送"/>
+
+    <item
+        android:id="@+id/localvideo"
+        android:icon="@drawable/localvideo"
+        android:title="本地视频"/>
+
+    <item
+        android:id="@+id/webvideo"
+        android:icon="@drawable/webvideo"
+        android:title="网络视频"/>
+</menu>
